@@ -1,0 +1,212 @@
+/*------------
+To Do:
+-hamburger menue needs to be white not grey
+-hover color needs to be white
+------------*/
+
+	Table of Contents
+	1. Layout
+	2. Typography
+	3. Navbar
+	4. Family
+	5. Interests
+
+
+
+/* --------------------------------------
+   1.Layout
+   -------------------------------------- */
+
+   #features {
+   	text-align: center;
+   }
+
+   #features img {
+   	margin: 0 0 20px;
+   }
+
+   #inputMessage {
+   	margin-bottom: 15px;
+   }
+   footer {
+   	background: #333;
+   	color: #eee;
+   	font-size: 11px;
+   	padding: 20px;
+   }
+
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+
+   body {
+   	-webkit-font-smoothing: antialiased;
+   	text-rendering: optimizelegibility;
+   }
+	.glyphicon {
+	   font-family:'Glyphicons Halflings' !important;
+	   // more css comes along here
+	}
+   .well .page-header {
+   	margin-top: 0;
+   }
+
+   .well .page-header h1 {
+   	margin-top: 0;
+   }
+
+   ul.unstyled {
+   	list-style: none;
+   	padding: 0;
+   }
+
+   h2.title{
+   	margin:0;
+   }
+   h3.title{
+   	margin:0;
+   	font-size: 167%;
+   }
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+   
+   /*navbar background color*/
+   .navbar {
+      box-shadow: 0px 10px 10px #888888;
+   	background: #DAB27F;
+   }
+
+   .navbar-nav>.h3{
+      color: #FFFFFF;
+      margin-top: 20px;
+   }
+
+   /*text color*/
+   .navbar-nav>li>a{
+   	color: #FFFFFF;
+   }
+   /*active text color*/
+   .navbar-nav>.active>a{
+   	color: #FFFFFF;
+   }
+
+   /*active hover colors*/
+   .navbar-nav>.active>a:hover{
+   	background-color: #8D6736;
+   	color: #FFFFFF;
+   }
+
+   /*hover text color*/
+   .navbar-nav>li>a:hover{
+   		color: #8D6736;
+   }
+   /*active tab color*/
+   .navbar-nav>.active>a{
+   	background-color:#8D6736;
+   }
+
+   .navbar-toggle{
+   	border: 1px solid #FFFFFF;
+   	color: #FFFFFF;
+   }
+
+   @media (min-width: 768px){
+   	.dropdown:hover .dropdown-menu {
+   		display: block;
+   	}
+   }
+
+
+/* --------------------------------------
+   Family
+   -------------------------------------- */
+   
+   .family {
+   	background: #7fbbda;
+   	padding: 50px 0;
+   	color: #ffffff;
+   }
+
+   
+
+/* --------------------------------------
+   State
+   -------------------------------------- */
+   .state{
+   	padding: 50px 0;
+   }
+   .state>.hr{
+   	border-top: 2px solid #cccccc;
+   }
+    .statehr{
+   	width: 10%;
+   	border-top: 1px solid #cccccc;
+   }
+
+/* --------------------------------------
+   Expenses
+   -------------------------------------- */
+   .expenses{
+	   	background: #7fbbda;
+	   	padding: 50px 0;
+	   	color: #ffffff;
+   }
+
+    .expenseshr{
+	   	width: 80%;
+	   	border-top: 1px solid #ffffff;
+   }
+
+   .accordion-toggle{
+   		color:#ffffff;
+   }
+   a:hover{
+   	color: #8D6736;
+   	text-decoration: none;
+   } 
+
+   /* --------------------------------------
+   Portfolio
+   -------------------------------------- */
+   .portfolio{
+   	padding: 50px 0;
+   }
+   .portfolio>hr{
+   	border-top: 1px solid #cccccc;
+   }
+
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+   #myCarousel {
+   	margin-top: 60px;
+   }
+
+   .carousel-caption {
+   	font-size: 24px;
+   }
+
+   .carousel-caption h4 {
+   	font-size: 32px;
+   }
+
+   #myCarousel .item { height: 400px; }
+
+   #slide1 {
+   	background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
+   }
+
+   #slide2 {
+   	background: url('../../images/carousel_medium_02.jpg') top center no-repeat;
+   }
+
+   #slide3 {
+   	background: url('../../images/carousel_medium_03.jpg') top center no-repeat;
+   }
+
+
