@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 	updateNavScroll();
+	$('#map').usmap({});
     $(window).scroll(function(){
           updateNavScroll();
     })
