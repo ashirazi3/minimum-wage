@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
 	updateNavScroll();
-	var family = 0;
 	var state = null;
 
 	$('#map').usmap({
@@ -9,7 +8,8 @@ $(document).ready(function(){
 		stateHoverStyles:{fill: '#203D6C'},
 		click: function(event, data){
 			state = data.name;
-			console.log(state); 
+		$('html,body').animate({scrollTop: $('#expenses').offset().top}, 750);
+
 		}
 	});
 	$('#map').usmap({stateHoverAnimation: 100});
