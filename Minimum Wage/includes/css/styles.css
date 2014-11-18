@@ -80,9 +80,9 @@ To Do:
    	background: #4E9455;
    }
 
-   .navbar-header>.h3{
-      color: #4E9455;
-      margin-top: 20px;
+   .navbar-header>h3{
+      color: #E0E0E0 !important;
+      margin-top: 17px;
    }
 
    /*text color*/
@@ -94,7 +94,7 @@ To Do:
    .navbar-nav>li>a:hover{
          color: #203D6C;
    }
-   
+
    /*active text color*/
    .navbar-nav>.active>a{
 
