@@ -1,7 +1,11 @@
 
 $(document).ready(function(){
 	updateNavScroll();
-	$('#map').usmap({});
+	$('#map').usmap({
+		stateStyles: {fill: '#E0E0E0'},
+		stateHoverStyles:{fill: '#203D6C'},
+	});
+	$('#map').usmap({stateHoverAnimation: 100});
     $(window).scroll(function(){
           updateNavScroll();
     })
