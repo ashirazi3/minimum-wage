@@ -172,6 +172,13 @@ To Do:
    	text-decoration: none;
    } 
 
+   .familyicon{
+      opacity: 0.85;
+   }
+
+   .familyicon:hover{
+      opacity:1;
+   }
    /* --------------------------------------
    Portfolio
    -------------------------------------- */
