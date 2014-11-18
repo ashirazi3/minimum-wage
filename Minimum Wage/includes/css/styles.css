@@ -80,7 +80,7 @@ To Do:
    	background: #4E9455;
    }
 
-   .navbar-nav>.h3{
+   .navbar-header>.h3{
       color: #4E9455;
       margin-top: 20px;
    }
@@ -89,16 +89,19 @@ To Do:
    .navbar-nav>li>a{
    	color: #E0E0E0;
    }
+
+   /*hover text color*/
+   .navbar-nav>li>a:hover{
+         color: #203D6C;
+   }
+   
    /*active text color*/
    .navbar-nav>.active>a{
 
    	color: #203D6C;
    }
 
-   /*hover text color*/
-   .navbar-nav>li>a:hover{
-   		color: #203D6C;
-   }
+   
    /*active tab color*/
    .navbar-nav>.active>a{
    	background-color:#B1D0B5;
