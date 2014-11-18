@@ -120,6 +120,14 @@
 								<div class="input-group">
 									<span class="input-group-addon">$</span>
 									<input type="text" class="form-control" id="housing" placeholder="0">
+									<br>
+								</div>
+								<div class="col-lg-8 col-lg-offset-4">
+									<select class="form-control" id="housingrate" name="rate">
+										<option value="1">yearly</option>
+										<option selected="selected" value="12">monthly</option>
+										<option value="365">daily</option>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -130,6 +138,13 @@
 									<span class="input-group-addon">$</span>
 									<input type="text" class="form-control" id="child" placeholder="0">
 								</div>
+								<div class="col-lg-8 col-lg-offset-4">
+									<select class="form-control" id="childrate" name="rate">
+										<option value="1">yearly</option>
+										<option selected="selected" value="12">monthly</option>
+										<option value="365">daily</option>
+									</select>
+								</div>
 							</div>
 						</div>
 						<div class="form-group text-left">
@@ -138,6 +153,13 @@
 								<div class="input-group">
 									<span class="input-group-addon">$</span>
 									<input type="text" class="form-control" id="groceries" placeholder="0">
+								</div>
+								<div class="col-lg-8 col-lg-offset-4">
+									<select class="form-control" id="groceriesrate" name="rate">
+										<option value="1">yearly</option>
+										<option selected="selected" value="12">monthly</option>
+										<option value="365">daily</option>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -148,6 +170,13 @@
 									<span class="input-group-addon">$</span>
 									<input type="text" class="form-control" id="medical" placeholder="0">
 								</div>
+								<div class="col-lg-8 col-lg-offset-4">
+									<select class="form-control" id="medicalrate" name="rate">
+										<option value="1">yearly</option>
+										<option selected="selected" value="12">monthly</option>
+										<option value="365">daily</option>
+									</select>
+								</div>
 							</div>
 						</div>
 						<div class="form-group">
@@ -156,6 +185,13 @@
 								<div class="input-group">
 									<span class="input-group-addon">$</span>
 									<input type="text" class="form-control" id="transportation" placeholder="0">
+								</div>
+								<div class="col-lg-8 col-lg-offset-4">
+									<select class="form-control" id="transportationrate" name="rate">
+										<option value="1">yearly</option>
+										<option selected="selected" value="12">monthly</option>
+										<option value="365">daily</option>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -166,10 +202,25 @@
 									<span class="input-group-addon">$</span>
 									<input type="text" class="form-control" id="other" placeholder="0">
 								</div>
+								<div class="col-lg-8 col-lg-offset-4">
+									<select class="form-control" id="otherrate" name="rate">
+										<option value="1">yearly</option>
+										<option selected="selected" value="12">monthly</option>
+										<option value="365">daily</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-lg-4 col-lg-offset-8">
+								<a id="calculate" class="btn btn-default">Calculate</a>
 							</div>
 						</div>
 					</fieldset>
 				</form>
+			</div>
+			<div>
+				<h3 id="number"></h3>
 			</div>
 		</div><!-- end row -->
 	</div> <!-- end containter-->
