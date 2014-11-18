@@ -77,36 +77,33 @@ To Do:
    /*navbar background color*/
    .navbar {
       box-shadow: 0px 10px 10px #888888;
-   	background: #DAB27F;
+   	background: #4E9455;
    }
 
    .navbar-nav>.h3{
-      color: #FFFFFF;
+      color: #4E9455;
       margin-top: 20px;
    }
 
    /*text color*/
    .navbar-nav>li>a{
-   	color: #FFFFFF;
+   	color: #E0E0E0;
    }
    /*active text color*/
    .navbar-nav>.active>a{
-   	color: #FFFFFF;
-   }
 
-   /*active hover colors*/
-   .navbar-nav>.active>a:hover{
-   	background-color: #8D6736;
-   	color: #FFFFFF;
+   	color: #203D6C;
    }
 
    /*hover text color*/
    .navbar-nav>li>a:hover{
-   		color: #8D6736;
+   		color: #203D6C;
    }
    /*active tab color*/
    .navbar-nav>.active>a{
-   	background-color:#8D6736;
+   	background-color:#B1D0B5;
+      border: 1px solid #216C2A;
+
    }
 
    .navbar-toggle{
@@ -126,10 +123,16 @@ To Do:
    -------------------------------------- */
    
    .family {
-   	background: #7fbbda;
+   	background: #E0E0E0;
    	padding: 50px 0;
-   	color: #ffffff;
+   	color: #203D6C;
    }
+
+   .familyhr{
+         width: 87%;
+         border-top: 1px solid #203D6C;
+   }
+
 
    
 
@@ -137,28 +140,25 @@ To Do:
    State
    -------------------------------------- */
    .state{
+      background: #216C2A;
    	padding: 50px 0;
+      color: #E0E0E0
    }
    .state>.hr{
    	border-top: 2px solid #cccccc;
    }
-    .statehr{
-   	width: 10%;
-   	border-top: 1px solid #cccccc;
-   }
-
+   
 /* --------------------------------------
    Expenses
    -------------------------------------- */
    .expenses{
-	   	background: #7fbbda;
-	   	padding: 50px 0;
-	   	color: #ffffff;
+	   background: #E0E0E0;
+      padding: 50px 0;
+      color: #203D6C;
    }
 
     .expenseshr{
-	   	width: 80%;
-	   	border-top: 1px solid #ffffff;
+         border-top: 1px solid #203D6C;
    }
 
    .accordion-toggle{
