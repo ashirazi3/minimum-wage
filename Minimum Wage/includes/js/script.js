@@ -1,7 +1,6 @@
-/*---------------------
-	navbar script
----------------------*/
+
 $(document).ready(function(){
+	updateNavScroll();
     $(window).scroll(function(){
           updateNavScroll();
     })
@@ -9,19 +8,17 @@ $(document).ready(function(){
 	    $(this).parent().parent().find('.active').removeClass('active');
 	    $(this).parent().addClass('active');
 	});
-})
+});
+
 function updateNavScroll(){
-	if($(window).scrollTop() < $("#interests").position().top -110){
+	console.log("goes to method");
+	if($(window).scrollTop() < $("#state").position().top -110){
+		console.log("goes in position")
 		$('.nav').find('.active').removeClass('active');
-	    $("#navAbout").addClass('active');
+	    $("#navFamily").addClass('active');
 	}
-	if($(window).scrollTop() > $("#interests").position().top -110){
+	if($(window).scrollTop() > $("#expenses").position().top -110){
 	   $('.nav').find('.active').removeClass('active');
-	    $("#navInterests").addClass('active');
-	}
-	if($(window).scrollTop() > $("#coursework").position().top -110){
-		console.log("ppp");
-	   $('.nav').find('.active').removeClass('active');
-	    $("#navCoursework").addClass('active');
+	    $("#navExpenses").addClass('active');
 	}
 }

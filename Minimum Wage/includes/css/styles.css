@@ -76,7 +76,7 @@ To Do:
    
    /*navbar background color*/
    .navbar {
-      box-shadow: 0px 10px 10px #888888;
+      box-shadow: 0px 5px 20px #666666;
    	background: #4E9455;
    }
 
@@ -178,35 +178,4 @@ To Do:
    .portfolio>hr{
    	border-top: 1px solid #cccccc;
    }
-
-/* --------------------------------------
-   Carousel
-   -------------------------------------- */
-
-   #myCarousel {
-   	margin-top: 60px;
-   }
-
-   .carousel-caption {
-   	font-size: 24px;
-   }
-
-   .carousel-caption h4 {
-   	font-size: 32px;
-   }
-
-   #myCarousel .item { height: 400px; }
-
-   #slide1 {
-   	background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
-   }
-
-   #slide2 {
-   	background: url('../../images/carousel_medium_02.jpg') top center no-repeat;
-   }
-
-   #slide3 {
-   	background: url('../../images/carousel_medium_03.jpg') top center no-repeat;
-   }
-
 
