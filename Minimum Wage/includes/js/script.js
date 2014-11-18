@@ -27,16 +27,26 @@ $(document).ready(function(){
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 			&& location.hostname == this.hostname) {
 			var $target = $(this.hash);
-		$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-		if ($target.length) {
-			var targetOffset = $target.offset().top;
-			$('html,body').animate({scrollTop: targetOffset}, 1000);
-			return false;
+			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+			if ($target.length) {
+				var targetOffset = $target.offset().top;
+				$('html,body').animate({scrollTop: targetOffset}, 750);
+				return false;
+			}
 		}
-	}
-});
+	});
+
+
+
+
+	
 
 });
+
+function autoscroll(){
+
+}
+
 
 function updateNavScroll(){
 	if($(window).scrollTop() > $("#expenses").position().top -110){
@@ -52,6 +62,7 @@ function updateNavScroll(){
 }
 
 function setFamily(num){
+	$('html,body').animate({scrollTop: $('#state').offset().top}, 750);
 	if(num==0){
 		$("#housing").val("639");
 		$("#child").val("0");
