@@ -41,9 +41,7 @@ $(document).ready(function(){
 });
 
 	$("#calculate").on('click', function(){
-		console.log("b4  " + wage)
 		total = parseInt(wage)*2040
-		console.log("after    " + wage)
 	$("form#expenseForm input[type=text]").each(function(){
 		if($(this).val()!==''){
 				total = parseInt(total) - parseInt($(this).val())*parseInt($("#"+$(this).attr('id').concat("rate")).val());
