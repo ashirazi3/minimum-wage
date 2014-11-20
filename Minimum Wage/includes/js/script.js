@@ -38,6 +38,12 @@ $(document).ready(function(){
 			return false;
 		}
 	}
+	
+	 $('a').on('click', function() {  
+        log.console("something happened");  
+        return false;      
+    });	
+	
 });
 
 	$("#calculate").on('click', function(){
@@ -60,11 +66,22 @@ $(document).ready(function(){
 		$("#number").css("color", "red");
 	}
 	});
+	
+	
+
 
 
 	
 
 });
+
+function toggle_visibility(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'block')
+	  e.style.display = 'none';
+   else
+	  e.style.display = 'block';
+}
 
 function autoscroll(){
 
