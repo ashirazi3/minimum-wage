@@ -35,7 +35,9 @@ $(document).ready(function(){
         document.getElementById('image').src="includes/images/dollar/dollar.jpg";
         budgetLeftOver = calcPerc(starting,total);
         clipVal = image.width*budgetLeftOver;
+        console.log(budgetLeftOver, starting, total, clipVal);
         img.style.clip = getClipVal(clipVal);
+        $("#number").html("Remaining In Budget: $" + total); 
         
 	}else{
 		$("#number").css("color", "red");
@@ -45,7 +47,9 @@ $(document).ready(function(){
         console.log(overBudgetPercentage, total, starting);
         clipVal = image.width*overBudgetPercentage;
         img.style.clip = getClipVal2(clipVal);
+        $("#number").html("Over Budget By: $" + total); 
 	}
+    
     
         
 	});
@@ -80,7 +84,7 @@ $(document).ready(function(){
 
 function calcPerc(total, budget) {
     var percentage = 100- (budget/total*100)
-    return percentage;
+    return percentage/100;
 }
 
 function getClipVal(left) {

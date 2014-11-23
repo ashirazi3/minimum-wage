@@ -65,10 +65,11 @@
     </div> 
                                 <div class="col-md-7 col-md-offset-1">
                                     <div class="input-group" style="margin-left:-5px">
-                                        <span class="input-group-addon" style="padding-right:5px; padding-left:5px; padding-bottom:5px">$</span>
+                                        <span class="input-group-addon" style="padding-right:5px; padding-left:5px;
+                                                                               padding-bottom:5px">$</span>
                                         <input type="number" class="form-control" id="housing" placeholder="0">									
 
-    </div>
+                                    </div>
                                     <select style="margin-left:-5px" class="form-control" 
                                             id="housingrate" name="rate">
                                             <option value="1">yearly</option>
@@ -94,7 +95,8 @@
                                         </span>
                                         <input type="number" class="form-control" id="childcare" placeholder="0">		
                                     </div>
-                                    <select style="margin-left:-5px"class="form-control" id="childcarerate" name="rate">
+                                    <select style="margin-left:-5px"class="form-control" id="childcarerate"
+                                            name="rate">
                                             <option value="1">yearly</option>
                                             <option selected="selected" value="12">monthly</option>
                                             <option value="365">daily</option>
@@ -120,14 +122,15 @@
                                         <input type="number" class="form-control" id="transportation"
                                                placeholder="0">
                                     </div>
-                                    <select style="margin-left:-5px"class="form-control" id="transportationrate" name="rate">
+                                    <select style="margin-left:-5px"class="form-control" id="transportationrate"
+                                            name="rate">
                                             <option value="1">yearly</option>
                                             <option selected="selected" value="12">monthly</option>
                                             <option value="365">daily</option>
                                         </select>
                                 </div>
                             </div>
-</div> <!--Transportation-->			
+                        </div> <!--Transportation-->			
                     </div> <!--houseing,childcare,transportation-->
                     <div class="row centered" style="padding-bottom: 15px">
                         <div class="col-md-4"> <!--Debt -->	
@@ -153,9 +156,9 @@
                                             <option selected="selected" value="12">monthly</option>
                                             <option value="365">daily</option>
                                         </select>
-    </div>
+                                </div>
                             </div> <!--image,form-->
-</div> <!--Debt-->
+                        </div> <!--Debt-->
                         <div class="col-md-4"> <!--Medical -->	
                             <div class="row">
                                 <label for="medical" class="control-label" 
@@ -172,14 +175,15 @@
                                         </span>
                                         <input type="number" class="form-control" id="medical" placeholder="0">		
                                     </div>
-                                    <select style="margin-left:-5px"class="form-control" id="medicalrate" name="rate">
+                                    <select style="margin-left:-5px"class="form-control" id="medicalrate"
+                                            name="rate">
                                             <option value="1">yearly</option>
                                             <option selected="selected" value="12">monthly</option>
                                             <option value="365">daily</option>
                                     </select>
                                 </div>
                             </div>
-</div> <!--Medical-->	
+                        </div> <!--Medical-->	
                         <div class="col-md-4"> <!--Groceries-->	
                             <div class="row">
                                 <label for="groceries" class="col-md-1 control-label" style="text-
@@ -210,7 +214,6 @@
                     <div class="form-group">
 							<div class="col-lg-4 col-lg-offset-8">
 								<a id="calculate" class="btn btn-default">Calculate</a>
-                                <h4 id="number"</h4>
 							</div>
 						</div>
                 </fieldset>			
@@ -218,9 +221,14 @@
             </div> <!--Put Expense stuff here -->
         </div>
         <div class="col-md-4 col-md-offset-1" id="dollar"> <!--Dollar-->
-            <div id="underlay"></div>
-            <img src="includes/images/dollar/dollar.jpg" id="image" />
-        </div>
+            <div class="row">
+                <h4 id="number"</h4>
+            </div>
+            <div class="row">
+                <div id="underlay" style="top:50px"></div>
+                <img src="includes/images/dollar/dollar.jpg" id="image" />
+            </div>
+        </div> <!--Dollar-->
 	</div> <!-- end containter-->
 </div> <!-- expense section-->
 
@@ -243,11 +251,17 @@
                 <h4>Where do you live?</h4>
             </div> <!--title v2-->
             <div class="row" id="contentv2">
-                <!-- put content here -->
+                <div id="state" class="container state">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-0 text-center"
+                        id="map" style="width: 1000px; height: 400px;"></div>
+                    </div>
+                  <br>
+               </div> <!-- end container -->
             </div> <!--content v2-->
         </div> <!--v2-->
-    </div>
-</div>
+    </div> <!--container-->
+</div> <!--split-->
 
 
 
