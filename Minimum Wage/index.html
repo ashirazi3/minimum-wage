@@ -66,7 +66,7 @@
                                 <div class="col-md-7 col-md-offset-1">
                                     <div class="input-group" style="margin-left:-5px">
                                         <span class="input-group-addon" style="padding-right:5px; padding-left:5px; padding-bottom:5px">$</span>
-                                        <input type="text" class="form-control" id="housing" placeholder="0">									
+                                        <input type="number" class="form-control" id="housing" placeholder="0">									
 
     </div>
                                     <select style="margin-left:-5px" class="form-control" 
@@ -92,9 +92,9 @@
                                         <span class="input-group-addon" style="padding-right:5px;
                                                                         padding-left:5px;padding-bottom:5px">$
                                         </span>
-                                        <input type="text" class="form-control" id="housing" placeholder="0">		
+                                        <input type="number" class="form-control" id="childcare" placeholder="0">		
                                     </div>
-                                    <select style="margin-left:-5px"class="form-control" id="housingrate" name="rate">
+                                    <select style="margin-left:-5px"class="form-control" id="childcarerate" name="rate">
                                             <option value="1">yearly</option>
                                             <option selected="selected" value="12">monthly</option>
                                             <option value="365">daily</option>
@@ -117,10 +117,10 @@
                                         <span class="input-group-addon" 
                                               style="padding-right:5px; padding-left:5px;padding-bottom:5px">$
                                         </span>
-                                        <input type="text" class="form-control" id="transportation"
+                                        <input type="number" class="form-control" id="transportation"
                                                placeholder="0">
                                     </div>
-                                    <select style="margin-left:-5px"class="form-control" id="housingrate" name="rate">
+                                    <select style="margin-left:-5px"class="form-control" id="transportationrate" name="rate">
                                             <option value="1">yearly</option>
                                             <option selected="selected" value="12">monthly</option>
                                             <option value="365">daily</option>
@@ -145,7 +145,7 @@
                                         <span class="input-group-addon" style="padding-right:5px; 
                                                                         padding-left:5px; padding-bottom:5px">$
                                         </span>
-                                        <input type="text" class="form-control" id="housing" placeholder="0">
+                                        <input type="number" class="form-control" id="housing" placeholder="0">
                                     </div>
                                     <select style="margin-left:-5px" class="form-control" 
                                             id="debtrate" name="rate">
@@ -170,7 +170,7 @@
                                         <span class="input-group-addon" style="padding-right:5px; 
                                                                         padding-left:5px; padding-bottom:5px">$
                                         </span>
-                                        <input type="text" class="form-control" id="medical" placeholder="0">		
+                                        <input type="number" class="form-control" id="medical" placeholder="0">		
                                     </div>
                                     <select style="margin-left:-5px"class="form-control" id="medicalrate" name="rate">
                                             <option value="1">yearly</option>
@@ -195,27 +195,30 @@
                                         <span class="input-group-addon" 
                                               style="padding-right:5px; padding-left:5px;padding-bottom:5px">$
                                         </span>
-                                        <input type="text" class="form-control" id="groceries"
+                                        <input type="number" class="form-control" id="groceries"
                                                placeholder="0">
                                     </div>
                                     <select style="margin-left:-5px"class="form-control" id="groceriesrate" name="rate">
                                             <option value="1">yearly</option>
                                             <option selected="selected" value="12">monthly</option>
                                             <option value="365">daily</option>
-                                        </select>
+                                    </select>
                                 </div>
                             </div>
 </div> <!--Groceries-->
                     </div> <!--debt, medical, groceries-->
+                    <div class="form-group">
+							<div class="col-lg-4 col-lg-offset-8">
+								<a id="calculate" class="btn btn-default">Calculate</a>
+                                <h4 id="number"</h4>
+							</div>
+						</div>
                 </fieldset>			
                 </form> <!-- expense calculator -->
             </div> <!--Put Expense stuff here -->
         </div>
         <div class="col-md-4 col-md-offset-1" id="dollar"> <!--Dollar-->
-            <input type="range" min="0" max="100" id="slider-h" value="0" />
-
             <div id="underlay"></div>
-
             <img src="includes/images/dollar/dollar.jpg" id="image" />
         </div>
 	</div> <!-- end containter-->
