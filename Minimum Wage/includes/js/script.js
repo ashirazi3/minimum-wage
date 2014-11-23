@@ -14,7 +14,6 @@ $(document).ready(function(){
 		if($(this).val()!==''){
 				total = parseInt(total) -     
                         parseInt($(this).val())*parseInt($("#"+$(this).attr('id').concat("rate")).val());
-            console.log("hey");
         }
 	});
 	if(total<0){
@@ -25,17 +24,29 @@ $(document).ready(function(){
         
 	}
 
+    var img = document.getElementById('image'), 
+        budgetLeftOver = null,
+        clipVal = null,
+        overBudgetPercentage = null,
+        starting = parseInt(wage)*2040;
+        
 	if(total>0){
 		$("#number").css("color", "green");
+        document.getElementById('image').src="includes/images/dollar/dollar.jpg";
+        budgetLeftOver = calcPerc(starting,total);
+        clipVal = image.width*budgetLeftOver;
+        img.style.clip = getClipVal(clipVal);
+        
 	}else{
 		$("#number").css("color", "red");
+        document.getElementById('image').src="includes/images/dollar/reddollar.png";
+        total = total*-1;
+        overBudgetPercentage = (((total+starting)/starting)-1);
+        console.log(overBudgetPercentage, total, starting);
+        clipVal = image.width*overBudgetPercentage;
+        img.style.clip = getClipVal2(clipVal);
 	}
-    var img = document.getElementById('image');
-    var starting=parseInt(wage)*2040;
-    var budgetLeftOver = calcPerc(starting,total)/100;
-    var clipVal = image.width*budgetLeftOver;
-    console.log("clipVal is: " + clipVal);
-    img.style.clip = getClipVal(clipVal);
+    
         
 	});
 
@@ -74,5 +85,9 @@ function calcPerc(total, budget) {
 
 function getClipVal(left) {
     return 'rect(auto, auto, auto, ' + left + 'px)';
+}
+
+function getClipVal2(right) {
+    return 'rect(auto, ' + right + 'px, auto, auto)';
 }
 

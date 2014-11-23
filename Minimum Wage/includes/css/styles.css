@@ -136,8 +136,12 @@ To Do:
          border-top: 1px solid #203D6C;
    }
 
-
-   
+/* --------------------------------------
+   Split View1
+   -------------------------------------- */
+   .view1{
+       background: #EBEBEB;
+   }
 
 /* --------------------------------------
    State
@@ -180,40 +184,25 @@ To Do:
 /* --------------------------------------
    Dollar
    -------------------------------------- */
-   
-#slider-h,
-/*#slider-v,*/
+#reddollar,   
 #image,
 #underlay {
     /* absolute positioning is mandatory for clipped elements (#image) */
     position: absolute;
 }
-#slider-h,
+#reddollar,
 #image,
 #underlay {
     width: 500px;
     left: 00px;
 }
-#slider-h {
-    top: 0px;
-}
-/*
-#slider-v {
-    top: 192px;
-    left: -50px;
-    width: 207px;
-    -moz-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -o-transform: rotate(270deg); 
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-}
-*/
+#reddollar
 #image,
 #underlay {
     top: 20px;
     height: 207px;
 }
+#reddollar,
 #image {
     /* initial clip state */
 }
