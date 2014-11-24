@@ -136,6 +136,10 @@ To Do:
          border-top: 1px solid #203D6C;
    }
 
+    #dadimage{
+        width:150%;
+    }
+
 /* --------------------------------------
    Split View1
    -------------------------------------- */
@@ -155,7 +159,8 @@ To Do:
    	border-top: 2px solid #cccccc;
    }
 
-    #titlev2 {
+    #titlev2,
+    #titlev1{
         color: #203D6C;
         background: #A9D0AE;
     }
@@ -164,9 +169,10 @@ To Do:
    Expenses
    -------------------------------------- */
    .expenses{
-	   background: #E0E0E0;
-      padding: 50px 0;
-      color: #203D6C;
+        background: #E0E0E0;
+        padding: 50px 0;
+        color: #203D6C;
+       
    }
 
     .expenseshr{
@@ -215,7 +221,12 @@ To Do:
     background-color: #E0E0E0;
 }
 
-
+/* --------------------------------------
+   Split
+   -------------------------------------- */
+.split{
+background:#A9D0AE;
+}
 
    
    /* --------------------------------------
