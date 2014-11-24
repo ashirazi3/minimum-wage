@@ -38,8 +38,7 @@
 		</div>
 	</div>
 	
-<div id="expenses" class="expenses">
-	<div class="container">
+<div id="expenses" class="container expenses">
 		<div class="row">
                 <div class="col-sm-6 col-sm-offset-3 text-center">
                     <h1>What are your expenses?</h1>
@@ -52,7 +51,7 @@
             <div class="row">
                 <form id="expenseForm" class="form-horizontal">		
                 <fieldset>
-                    <div class="row centered" style="padding-bottom: 15px">
+                    <div class="row centered" style="padding-bottom: 15px; margin-left:0px">
                         <div class="col-md-4"> <!--Housing -->	
                             <div class="row">
                                 <label for="housing" class="control-label" style="text-
@@ -132,7 +131,7 @@
                             </div>
                         </div> <!--Transportation-->			
                     </div> <!--houseing,childcare,transportation-->
-                    <div class="row centered" style="padding-bottom: 15px">
+                    <div class="row centered" style="padding-bottom: 15px; margin-left:0px">
                         <div class="col-md-4"> <!--Debt -->	
                             <div class="row">
                                 <label for="debt" class="control-label" style="text-
@@ -220,7 +219,7 @@
                 </form> <!-- expense calculator -->
             </div> <!--Put Expense stuff here -->
         </div>
-        <div class="col-md-4 col-md-offset-1" id="dollar"> <!--Dollar-->
+        <div class="col-md-4 col-md-offset-1" id="dollar" style="margin-left: 6.33333333%;"> <!--Dollar-->
             <div class="row">
                 <h4 id="number"</h4>
             </div>
@@ -229,11 +228,9 @@
                 <img src="includes/images/dollar/dollar.jpg" id="image" />
             </div>
         </div> <!--Dollar-->
-	</div> <!-- end containter-->
 </div> <!-- expense section-->
 
-<div id="split" class="split">
-	<div class="container">
+<div id="split" class="container split">
         <div class="col-md-6" id="view1">
             <div class="row" id="titlev1">
                 <h4>How big is your household?</h4>
@@ -248,19 +245,13 @@
         </div> <!--v1-->
         <div class="col-md-6" id="view2">
             <div class="row" id="titlev2">
-                <h4>Where do you live?</h4>
+                <h3 style="margin-left:2%">Where do you live?</h3>
             </div> <!--title v2-->
             <div class="row" id="contentv2">
-                <div id="state" class="container state">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-0 text-center"
-                        id="map" style="width: 1000px; height: 400px;"></div>
-                    </div>
-                  <br>
-               </div> <!-- end container -->
+                        <div class="container state col-md-6 col-md-offset-0 text-center"
+                        id="map" style="width: 570px; height: 400px;"></div>
             </div> <!--content v2-->
         </div> <!--v2-->
-    </div> <!--container-->
 </div> <!--split-->
 
 

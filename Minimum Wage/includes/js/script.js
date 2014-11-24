@@ -1,11 +1,23 @@
-
 $(document).ready(function(){
-	 wage = 7.25;
+    wage = 7.25;
     total = 0;
-
-
-	
-
+	$('#map').usmap({
+		stateStyles: {fill: '#E0E0E0'},
+		stateHoverStyles:{fill: '#203D6C'},      
+		click: function(event, data){
+            $("#map>svg>path").each(function(){
+                $(this).css('fill', ''); 
+            });
+            $('#' + data.name).css('fill', '#203D6C');
+			if(data.name==='CA'){
+				wage=9;
+			}else{
+				wage=7.25;
+			}              
+			$('html,body').animate({scrollTop: $('#expenses').offset().top}, 750);
+    
+            $('#map').usmap({stateHoverAnimation: 100});
+        }
     });
 
 	$("#calculate").on('click', function(){
@@ -49,38 +61,8 @@ $(document).ready(function(){
         img.style.clip = getClipVal2(clipVal);
         $("#number").html("Over Budget By: $" + total); 
 	}
-    
-    
-        
 	});
-
-
-
-//var img = document.getElementById('image');
-//var sldH = document.getElementById('slider-h');
-//var sldV = document.getElementById('slider-v');
-
-// attach change handlers to the sliders
-//sldH.addEventListener('change', changeHandler);
-//sldV.addEventListener('change', changeHandler);
-
-//function changeHandler(e) {
-//    
-//    var isHorizontal = e.srcElement.id == 'slider-h';
-//        
-//    // valhH should now equal the percentage of the 
-//    var valH = sldH.value;
-//    var budgetLeftOver = calcPerc(total,(total-budget));
-//    //var valV = sldV.value;
-//
-//    // calculate the percentage to pass an absolute length value 
-//    // to the clip property and determine the static value
-//    var leftVal = calcPerc(img.width, valH);
-//    var clipVal = getClipVal(leftVal);
-//
-//    // set the images' right offset clip accordingly
-//    img.style.clip = clipVal;
-//}
+});
 
 function calcPerc(total, budget) {
     var percentage = 100- (budget/total*100)
@@ -93,5 +75,12 @@ function getClipVal(left) {
 
 function getClipVal2(right) {
     return 'rect(auto, ' + right + 'px, auto, auto)';
+}
+
+function clickState(event, data){
+    $("#map > svg > path").each(function(){
+            $(this).css('fill', '');
+    });
+    $('#' + data.name).css('fill', 'pink');
 }
 

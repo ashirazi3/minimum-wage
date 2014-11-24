@@ -147,13 +147,18 @@ To Do:
    State
    -------------------------------------- */
    .state{
-      background: #216C2A;
+      background: #A9D0AE;
    	padding: 50px 0;
       color: #E0E0E0
    }
    .state>.hr{
    	border-top: 2px solid #cccccc;
    }
+
+    #titlev2 {
+        color: #203D6C;
+        background: #A9D0AE;
+    }
    
 /* --------------------------------------
    Expenses
