@@ -23,7 +23,7 @@
     <div id="expenses" class="expenses">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 text-center">
+            <div class="col-sm-6 text-center">
                 <h1>What are your expenses?</h1>
                 <hr class="expenseshr">
 
@@ -38,7 +38,7 @@
                             <div class="col-md-6">
                                 <label for="salary" class="control-label padding-right: -10px" style="text-align:left">What is your annual salary?</label>
                             </div>
-                            <div class="input-group">
+                            <div style=""class="input-group">
                                 <span class="input-group-addon" style="padding-right:5px; padding-left:5px;
                                 padding-bottom:5px">$</span>
                                 <input type="number" class="form-control" id="salary" placeholder="0">     
@@ -62,7 +62,7 @@
                                         <input type="number" class="form-control" id="housing" placeholder="0">									
 
                                     </div>
-                                    <select style="margin-left:-5px" class="form-control" 
+                                    <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control" 
                                     id="housingrate" name="rate">
                                     <option value="1">yearly</option>
                                     <option selected="selected" value="12">monthly</option>
@@ -87,8 +87,8 @@
                                 </span>
                                 <input type="number" class="form-control" id="childcare" placeholder="0">		
                             </div>
-                            <select style="margin-left:-5px"class="form-control" id="childcarerate"
-                            name="rate">
+                            <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control" 
+
                             <option value="1">yearly</option>
                             <option selected="selected" value="12">monthly</option>
                             <option value="365">daily</option>
@@ -107,15 +107,15 @@
                     <img src="includes/images/expenseIcons/transportation.png">
                 </div> 
                 <div class="col-md-8 col-md-offset-1" style="margin-left:16px">
-                    <div class="input-group">
+                <div class="input-group" style="margin-left:-5px">
                         <span class="input-group-addon" 
                         style="padding-right:5px; padding-left:5px;padding-bottom:5px">$
                     </span>
                     <input type="number" class="form-control" id="transportation"
                     placeholder="0">
                 </div>
-                <select class="form-control" id="transportationrate"
-                name="rate">
+                <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control" 
+
                 <option value="1">yearly</option>
                 <option selected="selected" value="12">monthly</option>
                 <option value="365">daily</option>
@@ -142,8 +142,8 @@
             </span>
             <input type="number" class="form-control" id="housing" placeholder="0">
         </div>
-        <select style="margin-left:-5px" class="form-control" 
-        id="debtrate" name="rate">
+        <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control" 
+
         <option value="1">yearly</option>
         <option selected="selected" value="12">monthly</option>
         <option value="365">daily</option>
@@ -167,8 +167,8 @@
             </span>
             <input type="number" class="form-control" id="medical" placeholder="0">		
         </div>
-        <select style="margin-left:-5px"class="form-control" id="medicalrate"
-        name="rate">
+        <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control" 
+
         <option value="1">yearly</option>
         <option selected="selected" value="12">monthly</option>
         <option value="365">daily</option>
@@ -187,18 +187,19 @@
         <img src="includes/images/expenseIcons/groceries.png">
     </div> 
     <div class="col-md-8 col-md-offset-1" style="padding-left:16px">
-        <div class="input-group">
+        <div class="input-group" style="margin-left:-5px">
             <span class="input-group-addon" 
             style="padding-right:5px; padding-left:5px;padding-bottom:5px">$
         </span>
         <input type="number" class="form-control" id="groceries"
         placeholder="0">
     </div>
-    <select class="form-control" id="groceriesrate" name="rate">
-        <option value="1">yearly</option>
-        <option selected="selected" value="12">monthly</option>
-        <option value="365">daily</option>
-    </select>
+    <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control" 
+
+    <option value="1">yearly</option>
+    <option selected="selected" value="12">monthly</option>
+    <option value="365">daily</option>
+</select>
 </div>
 </div>
 </div> <!--Groceries-->
