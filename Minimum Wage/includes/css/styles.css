@@ -127,8 +127,27 @@ To Do:
    
    .family {
    	background: #E0E0E0;
-   	padding: 50px 0;
    	color: #203D6C;
+   }
+
+   .familyhr{
+         width: 87%;
+         border-top: 1px solid #203D6C;
+   }
+
+    #dadimage{
+        width:150%;
+    }
+
+
+/* --------------------------------------
+   Minimum Wage
+   -------------------------------------- */
+   
+   .minimum {
+    background: #A9D0AE;
+    padding: 50px;
+    color: #203D6C;
    }
 
    .familyhr{
@@ -152,7 +171,6 @@ To Do:
    -------------------------------------- */
    .state{
       background: #A9D0AE;
-   	padding: 50px 0;
       color: #E0E0E0
    }
    .state>.hr{
@@ -170,7 +188,6 @@ To Do:
    -------------------------------------- */
    .expenses{
         background: #E0E0E0;
-        padding: 50px 0;
         color: #203D6C;
        
    }
@@ -229,13 +246,5 @@ background:#A9D0AE;
 }
 
    
-   /* --------------------------------------
-   Portfolio
-   -------------------------------------- */
-   .portfolio{
-   	padding: 50px 0;
-   }
-   .portfolio>hr{
-   	border-top: 1px solid #cccccc;
-   }
+
 

@@ -84,3 +84,15 @@ function clickState(event, data){
     $('#' + data.name).css('fill', 'pink');
 }
 
+
+
+
+// <div class="col-md-5 col-md-offset-1" id="view2">
+//     <div class="row" id="titlev2">
+//         <h2 style="margin-left:2%">Where do you live?</h2>
+//     </div> <!--title v2-->
+//     <div class="row" id="contentv2">
+//         <div class="container state col-md-6 col-md-offset-0 text-center"
+//         id="map" style="width: 570px; height: 400px;"></div>
+//     </div> <!--content v2-->
+// </div> <!--v2-->
