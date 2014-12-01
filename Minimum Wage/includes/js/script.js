@@ -1,32 +1,35 @@
 $(document).ready(function(){
     wage = 7.25;
     total = 0;
-	$('#map').usmap({
-		stateStyles: {fill: '#E0E0E0'},
-		stateHoverStyles:{fill: '#203D6C'},      
-		click: function(event, data){
-            $("#map>svg>path").each(function(){
-                $(this).css('fill', ''); 
-            });
-            $('#' + data.name).css('fill', '#203D6C');
-			if(data.name==='CA'){
-				wage=9;
-			}else{
-				wage=7.25;
-			}              
-			$('html,body').animate({scrollTop: $('#expenses').offset().top}, 750);
-    
-            $('#map').usmap({stateHoverAnimation: 100});
-        }
-    });
 
 	$("#calculate").on('click', function(){
-		total = parseInt(wage)*2040;
+		total = parseInt($("#salary").val());
+                console.log(total);
+                // Right after this total becomes null
 	$("form#expenseForm input[type=number]").each(function(){
 		if($(this).val()!==''){
 				total = parseInt(total) -     
                         parseInt($(this).val())*parseInt($("#"+$(this).attr('id').concat("rate")).val());
         }
+        $("#minimum").show();
+        $('#map').usmap({
+        stateStyles: {fill: '#E0E0E0'},
+        stateHoverStyles:{fill: '#203D6C'},      
+        click: function(event, data){
+            $("#map>svg>path").each(function(){
+                $(this).css('fill', ''); 
+            });
+            $('#' + data.name).css('fill', '#203D6C');
+            if(data.name==='CA'){
+                wage=9;
+            }else{
+                wage=7.25;
+            }              
+            $('html,body').animate({scrollTop: $('#expenses').offset().top}, 750);
+    
+            $('#map').usmap({stateHoverAnimation: 100});
+        }
+    });
 	});
 	if(total<0){
 		$("#number").text('-$' + Math.abs(total));
