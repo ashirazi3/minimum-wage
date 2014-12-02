@@ -22,15 +22,15 @@
 	
     <div id="expenses" class="expenses" stlye="height:100%">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-6 text-center">
+        <div class="col-md-6" id="expensecalc">
+         <div class="row">
+            <div class="col-sm-12 text-center">
                 <h1>What are your expenses?</h1>
                 <hr class="expenseshr">
 
             </div> <!-- header div -->
         </div> <!-- title row -->
         <br>
-        <div class="col-md-6" id="expensecalc">
             <div class="row">
                 <form id="expenseForm" class="form-horizontal">		
                     <fieldset>
@@ -213,13 +213,19 @@
 </form> <!-- expense calculator -->
 </div> <!--Put Expense stuff here -->
 </div> <!--Calculator-->
-<div class="col-md-4 col-md-offset-1" id="dollar" style="margin-left: 6.33333333%;"> <!--Dollar-->
-    <div class="row">
-        <h4 id="number"><br></h4>
+<div class="col-md-4 col-md-offset-1" id="dollar"> <!--Dollar-->
+    <div id="dollarRow" class="row">
+        <!-- <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/>
+        <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/>
+        <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/>
+        <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/>
+        <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/>
+        <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/>
+        <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/>
+        <img src="includes/images/dollar/dollar.jpg" id="image" style="width:10%"/> -->
     </div>
     <div class="row">
-        <div id="underlay" style="top:50px"></div>
-        <img src="includes/images/dollar/dollar.jpg" id="image" />
+        <h4 id="number"><br></h4>
     </div>
 </div> <!--Dollar-->
 
@@ -239,7 +245,7 @@
 </div> <!--split-->
 
 <div id="minimum" class="minimum" style="display: none">
-
+<div class="container">
     <div class="row" id="titlev2">
         <div class="col-md-6">
         <div class="col-md-12 text-center">
@@ -251,6 +257,7 @@
                         <h2 style="margin-left:18%; margin-top:21%">Where do you live?</h2>
 
         </div>
+    </div>
     </div>
 </div> <!--title v2-->
 

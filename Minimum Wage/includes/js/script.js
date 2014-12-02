@@ -2,6 +2,11 @@ $(document).ready(function(){
     wage = 7.25;
     total = 0;
 
+    var i;
+    for(i=0; i<210; i++){
+        $("#dollarRow").prepend('<img id="dollar'+ i +'"" src="includes/images/dollar/dollar.jpg" style="width:10%"/>');
+    }
+    
 	$("#calculate").on('click', function(){
 		total = parseInt($("#salary").val());
                 console.log(total);
