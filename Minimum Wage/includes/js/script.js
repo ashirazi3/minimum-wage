@@ -3,80 +3,69 @@ $(document).ready(function(){
     total = 0;
 
     var i;
-    for(i=0; i<210; i++){
-        $("#dollarRow").prepend('<img id="dollar'+ i +'"" src="includes/images/dollar/dollar.jpg" style="width:10%"/>');
+    for(i=1; i<211; i++){
+        $("#dollarRow").prepend('<img id="dollar'+ i +'"" src="includes/images/dollar/dollar.jpg" style= "visibility:none; width:10%"/>');
     }
     
     $("#calculate").on('click', function(){
         total = parseInt($("#salary").val());
+        var leftover = total;
         console.log(total);
         $("form#expenseForm input[type=number]").each(function(){
             if($(this).val()===$("#salary").val()){
                 console.log("good");
+            }else if($(this).val()>0){
+                var rate= $(this).attr("id") + "rate";
+                leftover = parseInt(leftover) - parseInt($(this).val())*parseInt($("#" + rate).val());
+                console.log("test " + leftover)
             }
         });
-//                 // Right after this total becomes null
-//                 $("form#expenseForm input[type=number]").each(function(){
-//                   if($(this).val()!==''){
-//                     total = parseInt(total) -     
-//                     parseInt($(this).val())*parseInt($("#"+$(this).attr('id').concat("rate")).val());
-//                 }
-//                 $("#minimum").show();
-//                 $('#map').usmap({
-//                     stateStyles: {fill: '#E0E0E0'},
-//                     stateHoverStyles:{fill: '#203D6C'},      
-//                     click: function(event, data){
-//                         $("#map>svg>path").each(function(){
-//                             $(this).css('fill', ''); 
-//                         });
-//                         $('#' + data.name).css('fill', '#203D6C');
-//                         if(data.name==='CA'){
-//                             wage=9;
-//                         }else{
-//                             wage=7.25;
-//                         }              
-//                         $('html,body').animate({scrollTop: $('#expenses').offset().top}, 750);
-
-//                         $('#map').usmap({stateHoverAnimation: 100});
-//                     }
-//                 });
-//             });
-// if(total<0){
-//   $("#number").text('-$' + Math.abs(total));
-
-// }else{
-//   $("#number").text('$' + total);
-
-// }
-
-// var img = document.getElementById('image'), 
-// budgetLeftOver = null,
-// clipVal = null,
-// overBudgetPercentage = null,
-// starting = parseInt(wage)*2040;
-
-// if(total>0){
-//   $("#number").css("color", "green");
-//   document.getElementById('image').src="includes/images/dollar/dollar.jpg";
-//   budgetLeftOver = calcPerc(starting,total);
-//   clipVal = image.width*budgetLeftOver;
-//   console.log(budgetLeftOver, starting, total, clipVal);
-//   img.style.clip = getClipVal(clipVal);
-//   $("#number").html("Remaining In Budget: $" + total); 
-
-// }else{
-//   $("#number").css("color", "red");
-//   document.getElementById('image').src="includes/images/dollar/reddollar.png";
-//   total = total*-1;
-//   overBudgetPercentage = (((total+starting)/starting)-1);
-//   console.log(overBudgetPercentage, total, starting);
-//   clipVal = image.width*overBudgetPercentage;
-//   img.style.clip = getClipVal2(clipVal);
-//   $("#number").html("Over Budget By: $" + total); 
-// }
-});
+        calculatedollars((leftover/total)*210);
+    });
 });
 
+function resetdollars(number){
+    if(number>0){
+        for(i=1; i<211; i++){
+            $("#dollar"+i).attr("src", "includes/images/dollar/dollar.jpg");
+        }
+    }else{
+        for(i=1; i<211; i++){
+            $("#dollar"+i).attr("src", "includes/images/dollar/reddollar.jpg");
+        }
+    }
+    for(i=1; i<211; i++){
+        if(i>=number){ 
+            $("#dollar"+i).attr("style", "width:10%");
+        }
+    }
+}
+
+function calculatedollars(number){
+    if(number>0){
+        resetdollars(1);
+        for(i=1; i<211; i++){
+            if(i>=number){ 
+                console.log(i + " hides");
+                $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
+            }else{
+                console.log(i + " shows");
+                $("#dollar"+i).attr("style", "width:10%");
+            }
+        }
+    }else{
+        resetdollars(-1);
+        for(i=1; i<211; i++){
+            if(i>=number){ 
+                console.log(i + " hides");
+                $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
+            }else{
+                console.log(i + " shows");
+                $("#dollar"+i).attr("style", "width:10%");
+            }
+        }
+    }
+}
 function calcPerc(total, budget) {
     var percentage = 100- (budget/total*100)
     return percentage/100;
