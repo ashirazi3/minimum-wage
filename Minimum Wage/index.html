@@ -22,16 +22,16 @@
 	
     <div id="expenses" class="expenses" stlye="height:100%">
         <div class="container">
-          <div class="row">
+            <div class="row">
             <div class="col-sm-6 text-center">
                 <h1>What are your expenses?</h1>
                 <hr class="expenseshr">
 
             </div> <!-- header div -->
         </div> <!-- title row -->
-        <br>
-        <div class="col-md-6" id="expensecalc">
-            <div class="row">
+            <br>
+            <div class="col-md-6" id="expensecalc">
+                <div class="row">
                 <form id="expenseForm" class="form-horizontal">		
                     <fieldset>
                         <div class="row">
@@ -43,7 +43,7 @@
                                 padding-bottom:5px">$</span>
                                 <input type="number" class="form-control" id="salary" placeholder="0">     
                             </div>
-                        </div>
+                        </div> <!--annual salary -->
                         <div class="row centered" style="padding-bottom: 15px; margin-left:0px">
                             <div class="col-md-4"> <!--Housing -->	
                                 <div class="row">
@@ -124,14 +124,14 @@
     </div>
 </div> <!--Transportation-->			
 </div> <!--houseing,childcare,transportation-->
-<div class="row centered" style="padding-bottom: 15px; margin-left:0px">
-    <div class="col-md-4"> <!--Debt -->	
-        <div class="row">
+                        <div class="row centered" style="padding-bottom: 15px; margin-left:0px">
+                            <div class="col-md-4"> <!--Debt -->	
+                                <div class="row">
             <label for="debt" class="control-label" style="text-
             align:left">Debt
         </label>	
     </div>
-    <div class="row" style="margin-left:-35px">
+                                <div class="row" style="margin-left:-35px">
         <div class="col-md-3">
             <img src="includes/images/expenseIcons/debt2.png">
         </div> 
@@ -150,8 +150,8 @@
     </select>
 </div>
 </div> <!--image,form-->
-</div> <!--Debt-->
-<div class="col-md-4"> <!--Medical -->	
+                            </div> <!--Debt-->
+                            <div class="col-md-4"> <!--Medical -->	
     <div class="row">
         <label for="medical" class="control-label" 
         style="text-align:left">Medical</label>			
@@ -176,7 +176,7 @@
 </div>
 </div>
 </div> <!--Medical-->	
-<div class="col-md-4"> <!--Groceries-->	
+                            <div class="col-md-4"> <!--Groceries-->	
     <div class="row">
         <label for="groceries" class="col-md-1 control-label" style="text-
         align:left">Groceries
@@ -203,17 +203,75 @@
 </div>
 </div>
 </div> <!--Groceries-->
-</div> <!--debt, medical, groceries-->
-<div class="form-group">
-    <div class="col-lg-4 col-lg-offset-9">
-        <a id="calculate" class="btn btn-default" style="margin-left: 25px">Calculate</a>
-    </div>
-</div>
-</fieldset>			
-</form> <!-- expense calculator -->
-</div> <!--Put Expense stuff here -->
-</div> <!--Calculator-->
-<div class="col-md-4 col-md-offset-1" id="dollar" style="margin-left: 6.33333333%;"> <!--Dollar-->
+                        </div> <!--debt, medical, groceries-->
+                        <div class="row centered" style ="padding-bottom: 15px; margin-left:0px">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <label for="taxes" class="control-label" style="text-
+                                    align:left">Taxes
+                                </label>	
+                            </div>
+                            <div class="row" style="margin-left:-35px">
+                                <div class="col-md-3">
+                                    <img src="includes/images/expenseIcons/taxes.png" style="width: 250%;">
+                                </div> 
+                                <div class="col-md-7 col-md-offset-1">
+                                    <div class="input-group" style="margin-left:-5px">
+                                        <span class="input-group-addon" style="padding-right:5px; 
+                                        padding-left:5px; padding-bottom:5px">$
+                                    </span>
+                                    <input type="number" class="form-control" id="housing" placeholder="0">
+                                </div>
+                                        <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control">
+
+                                <option value="1">yearly</option>
+                                <option selected="selected" value="12">monthly</option>
+                                <option value="365">daily</option>
+                            </select>
+                                </div>
+                            </div> <!--image,form-->                            
+
+                            </div> <!--Taxes-->
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <label for="other" class="control-label" style="text-
+                                    align:left">Other
+                                </label>	
+                            </div>
+                            <div class="row" style="margin-left:-35px">
+                                <div class="col-md-3">
+                                    <img src="includes/images/expenseIcons/other.png" style="width: 250%;">
+                                </div> 
+                                <div class="col-md-7 col-md-offset-1">
+                                    <div class="input-group" style="margin-left:-5px">
+                                        <span class="input-group-addon" style="padding-right:5px; 
+                                        padding-left:5px; padding-bottom:5px">$
+                                    </span>
+                                    <input type="number" class="form-control" id="other" placeholder="0">
+                                </div>
+                                <select style="margin-left:-5px; padding-left: 5px; padding-right:0px" class="form-control"> 
+
+                                <option value="1">yearly</option>
+                                <option selected="selected" value="12">monthly</option>
+                                <option value="365">daily</option>
+                            </select>
+                        </div>
+                        </div> <!--image,form-->                            
+
+                            </div> <!--Other-->
+                            <div class="col-md-1" style= "margin-left:50px;margin-top:46px;">
+                                <div class="form-group">
+                                        <a id="calculate" class="btn btn-default" style="margin-left: 25px">Calculate</a>
+                                </div>    
+                            </div> <!--Calculate-->
+
+                                
+                        </div> <!--Other, taxes, calculate-->
+                    </fieldset>			
+                </form> <!-- expense calculator -->
+            </div> <!--Put Expense stuff here -->
+            </div> <!--Calculator-->
+            <div class="col-md-4 col-md-offset-1" id="dollar" style="margin-left: 6.33333333%;"> <!--Dollar-->
     <div class="row">
         <h4 id="number"><br></h4>
     </div>
@@ -223,7 +281,7 @@
     </div>
 </div> <!--Dollar-->
 
-</div>
+        </div>
 
 </div> <!-- expense section-->
 
