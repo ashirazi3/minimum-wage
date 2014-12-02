@@ -7,9 +7,14 @@ $(document).ready(function(){
         $("#dollarRow").prepend('<img id="dollar'+ i +'"" src="includes/images/dollar/dollar.jpg" style="width:10%"/>');
     }
     
-//     $("#calculate").on('click', function(){
-//       total = parseInt($("#salary").val());
-//       console.log(total);
+    $("#calculate").on('click', function(){
+        total = parseInt($("#salary").val());
+        console.log(total);
+        $("form#expenseForm input[type=number]").each(function(){
+            if($(this).val()===$("#salary").val()){
+                console.log("good");
+            }
+        });
 //                 // Right after this total becomes null
 //                 $("form#expenseForm input[type=number]").each(function(){
 //                   if($(this).val()!==''){
@@ -31,7 +36,7 @@ $(document).ready(function(){
 //                             wage=7.25;
 //                         }              
 //                         $('html,body').animate({scrollTop: $('#expenses').offset().top}, 750);
-                        
+
 //                         $('#map').usmap({stateHoverAnimation: 100});
 //                     }
 //                 });
@@ -41,7 +46,7 @@ $(document).ready(function(){
 
 // }else{
 //   $("#number").text('$' + total);
-  
+
 // }
 
 // var img = document.getElementById('image'), 
@@ -58,7 +63,7 @@ $(document).ready(function(){
 //   console.log(budgetLeftOver, starting, total, clipVal);
 //   img.style.clip = getClipVal(clipVal);
 //   $("#number").html("Remaining In Budget: $" + total); 
-  
+
 // }else{
 //   $("#number").css("color", "red");
 //   document.getElementById('image').src="includes/images/dollar/reddollar.png";
@@ -69,7 +74,7 @@ $(document).ready(function(){
 //   img.style.clip = getClipVal2(clipVal);
 //   $("#number").html("Over Budget By: $" + total); 
 // }
-// });
+});
 });
 
 function calcPerc(total, budget) {
