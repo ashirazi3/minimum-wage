@@ -188,6 +188,8 @@ To Do:
    -------------------------------------- */
    .expenses{
         background: #E0E0E0;
+        padding: 50px;
+        padding-top: 0px;
         color: #203D6C;
        
    }
