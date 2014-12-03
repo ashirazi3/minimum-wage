@@ -23,6 +23,7 @@ $(document).ready(function(){
         console.log("leftover " + leftover)
         calculatedollars((leftover/total)*210);
         updateText(leftover);
+        $("#minimum").show();
     });
 });
 
