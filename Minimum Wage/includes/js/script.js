@@ -68,7 +68,7 @@ function calculatedollars(number){
 
 function updateText(leftover){
     if(leftover>= 0){
-        $("#number").text("You will have an excess of $" + leftover + " a year")
+        $("#number").text("You will have an excess of $" + leftover + " a year.")
     }else{
         $("#number").text("At this rate, you will accumulate $" + Math.abs(leftover) + " of debt each year")
     }
