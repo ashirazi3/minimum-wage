@@ -21,7 +21,7 @@ $(document).ready(function(){
                 $(this).css('fill', '');
                 
             });
-
+            $("#mwage").text("The minimum wage in " + data.name + " is $" + wage + ". That's an annual salary of $" + wage*2040);
             $('#' + data.name).css('fill', '#203D6C');
             if(data.name==='CA'){
                 wage=9;
