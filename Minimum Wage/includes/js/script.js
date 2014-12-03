@@ -1,33 +1,129 @@
-$(document).ready(function(){
-    wage = 7.25;
-    total = 0;
+var wage = 7.25;
+var total = 0;
+var stotal = 0;
+var i;
+var secondCalculated = false;
 
-    var i;
+$(document).ready(function(){
+    
     for(i=1; i<221; i++){
         $("#dollarRow").prepend('<img id="dollar'+ i +'"" src="includes/images/dollar/dollar.jpg" style= "visibility:none; width:10%"/>');
     }
     
     $("#calculate").on('click', function(){
-        total = parseInt($("#salary").val());
-        var leftover = total;
-        console.log(total);
-        $("form#expenseForm input[type=number]").each(function(){
-            if($(this).attr("id") == $("#salary").attr("id")){
-                console.log("good");
-            }else if($(this).val()>0){
-                var rate= $(this).attr("id") + "rate";
-                leftover = parseInt(leftover) - parseInt($(this).val())*parseInt($("#" + rate).val());
-                console.log("test " + leftover)
-            }
-        });
-        console.log("leftover " + leftover)
-        calculatedollars((leftover/total)*210);
-        updateText(leftover);
+        doMagic(total);
         $("#minimum").show();
+        $('#map').usmap({
+        stateStyles: {fill: '#E0E0E0'},
+        stateHoverStyles:{fill: '#203D6C'},      
+        click: function(event, data){
+            $("#map>svg>path").each(function(){
+                $(this).css('fill', '');
+                
+            });
+
+            $('#' + data.name).css('fill', '#203D6C');
+            if(data.name==='CA'){
+                wage=9;
+            }else{
+                wage=7.25;
+            }              
+            if(data.name==='CA'){
+                wage=9;
+            }else{
+                wage=7.25;
+            }
+
+            if(!secondCalculated){
+                secondCalculated = true;
+                createSecondDollar();
+            } 
+            doMagic2(stotal)                  
+            $('#map').usmap({stateHoverAnimation: 100});
+        }
+        });
     });
 });
 
+function doMagic2(total){
+    stotal = wage*2040;
+        var leftover = stotal;
+        $("form#expenseForm input[type=number]").each(function(){
+            if($(this).attr("id") == $("#salary").attr("id")){
+            }else if($(this).val()>0){
+                var rate= $(this).attr("id") + "rate";
+                leftover = parseInt(leftover) - parseInt($(this).val())*parseInt($("#" + rate).val());
+            }
+        });
+        calculatedollars2((leftover/stotal)*210);
+        updateText2(leftover);
+
+}
+function createSecondDollar(){
+    var j;
+    for(j=1; j<221; j++){
+        $("#dollarRow2").prepend('<img id="2dollar'+ j +'"" src="includes/images/dollar/dollar.jpg" style= "visibility:none; width:10%"/>');
+    }
+}
+function resetdollars2(number){
+    var j;
+    if(number>0){
+        for(j=1; j<221; j++){
+            $("#2dollar"+j).attr("src", "includes/images/dollar/dollar.jpg");
+        }
+    }else{
+        for(j=1; j<221; j++){
+            $("#2dollar"+j).attr("src", "includes/images/dollar/reddollar.png");
+        }
+    }
+    for(j=1; j<221; j++){
+        if(j>=number){ 
+            $("#2dollar"+i).attr("style", "width:10%");
+        }
+    }
+}
+
+function calculatedollars2(number){
+    var i;
+    if(number>0){
+        resetdollars2(1);
+        for(i=1; i<221; i++){
+            if(i>=number){ 
+                $("#2dollar"+i).attr("style", "visibility:hidden; width:10%");
+            }else{
+                $("#2dollar"+i).attr("style", "width:10%");
+            }
+        }
+    }else{
+        resetdollars2(-1);
+        var inv = Math.abs(number);
+        for(i=1; i<221; i++){
+            if(i>=inv){ 
+                $("#2dollar"+i).attr("style", "visibility:hidden; width:10%");
+            }else{
+                $("#2dollar"+i).attr("style", "width:10%");
+            }
+        }
+    }
+}
+function doMagic(total){
+    total = parseInt($("#salary").val());
+        var leftover = total;
+        $("form#expenseForm input[type=number]").each(function(){
+            if($(this).attr("id") == $("#salary").attr("id")){
+            }else if($(this).val()>0){
+                var rate= $(this).attr("id") + "rate";
+                leftover = parseInt(leftover) - parseInt($(this).val())*parseInt($("#" + rate).val());
+            }
+        });
+        calculatedollars((leftover/total)*210);
+        updateText(leftover);
+        if(secondCalculated){
+            doMagic2(total)
+        }
+}
 function resetdollars(number){
+    var i;
     if(number>0){
         for(i=1; i<221; i++){
             $("#dollar"+i).attr("src", "includes/images/dollar/dollar.jpg");
@@ -47,6 +143,7 @@ function resetdollars(number){
 function calculatedollars(number){
     if(number>0){
         resetdollars(1);
+        var i;
         for(i=1; i<221; i++){
             if(i>=number){ 
                 $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
@@ -57,6 +154,7 @@ function calculatedollars(number){
     }else{
         resetdollars(-1);
         var inv = Math.abs(number);
+        var i;
         for(i=1; i<221; i++){
             if(i>=inv){ 
                 $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
@@ -67,11 +165,19 @@ function calculatedollars(number){
     }
 }
 
+function updateText2(leftover){
+    if(leftover>= 0){
+        $("#number2").text("You will have an excess of $" + leftover + " a year.")
+    }else{
+        $("#number2").text("At this rate, you will accumulate $" + Math.abs(leftover) + " of debt each year.")
+    }
+}
+
 function updateText(leftover){
     if(leftover>= 0){
         $("#number").text("You will have an excess of $" + leftover + " a year.")
     }else{
-        $("#number").text("At this rate, you will accumulate $" + Math.abs(leftover) + " of debt each year")
+        $("#number").text("At this rate, you will accumulate $" + Math.abs(leftover) + " of debt each year.")
     }
 }
 
