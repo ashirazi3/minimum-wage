@@ -12,7 +12,7 @@ $(document).ready(function(){
         var leftover = total;
         console.log(total);
         $("form#expenseForm input[type=number]").each(function(){
-            if($(this).val()===$("#salary").val()){
+            if($(this).attr("id") == $("#salary").attr("id")){
                 console.log("good");
             }else if($(this).val()>0){
                 var rate= $(this).attr("id") + "rate";
@@ -20,7 +20,9 @@ $(document).ready(function(){
                 console.log("test " + leftover)
             }
         });
+        console.log("leftover " + leftover)
         calculatedollars((leftover/total)*210);
+        updateText(leftover);
     });
 });
 
@@ -31,7 +33,7 @@ function resetdollars(number){
         }
     }else{
         for(i=1; i<211; i++){
-            $("#dollar"+i).attr("src", "includes/images/dollar/reddollar.jpg");
+            $("#dollar"+i).attr("src", "includes/images/dollar/reddollar.png");
         }
     }
     for(i=1; i<211; i++){
@@ -46,26 +48,32 @@ function calculatedollars(number){
         resetdollars(1);
         for(i=1; i<211; i++){
             if(i>=number){ 
-                console.log(i + " hides");
                 $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
             }else{
-                console.log(i + " shows");
                 $("#dollar"+i).attr("style", "width:10%");
             }
         }
     }else{
         resetdollars(-1);
+        var inv = Math.abs(number);
         for(i=1; i<211; i++){
-            if(i>=number){ 
-                console.log(i + " hides");
+            if(i>=inv){ 
                 $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
             }else{
-                console.log(i + " shows");
                 $("#dollar"+i).attr("style", "width:10%");
             }
         }
     }
 }
+
+function updateText(leftover){
+    if(leftover>= 0){
+        $("#number").text("You will have an excess of $" + leftover + " a year")
+    }else{
+        $("#number").text("At this rate, you will accumulate $" + Math.abs(leftover) + " of debt each year")
+    }
+}
+
 function calcPerc(total, budget) {
     var percentage = 100- (budget/total*100)
     return percentage/100;
