@@ -3,7 +3,7 @@ $(document).ready(function(){
     total = 0;
 
     var i;
-    for(i=1; i<211; i++){
+    for(i=1; i<221; i++){
         $("#dollarRow").prepend('<img id="dollar'+ i +'"" src="includes/images/dollar/dollar.jpg" style= "visibility:none; width:10%"/>');
     }
     
@@ -28,15 +28,15 @@ $(document).ready(function(){
 
 function resetdollars(number){
     if(number>0){
-        for(i=1; i<211; i++){
+        for(i=1; i<221; i++){
             $("#dollar"+i).attr("src", "includes/images/dollar/dollar.jpg");
         }
     }else{
-        for(i=1; i<211; i++){
+        for(i=1; i<221; i++){
             $("#dollar"+i).attr("src", "includes/images/dollar/reddollar.png");
         }
     }
-    for(i=1; i<211; i++){
+    for(i=1; i<221; i++){
         if(i>=number){ 
             $("#dollar"+i).attr("style", "width:10%");
         }
@@ -46,7 +46,7 @@ function resetdollars(number){
 function calculatedollars(number){
     if(number>0){
         resetdollars(1);
-        for(i=1; i<211; i++){
+        for(i=1; i<221; i++){
             if(i>=number){ 
                 $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
             }else{
@@ -56,7 +56,7 @@ function calculatedollars(number){
     }else{
         resetdollars(-1);
         var inv = Math.abs(number);
-        for(i=1; i<211; i++){
+        for(i=1; i<221; i++){
             if(i>=inv){ 
                 $("#dollar"+i).attr("style", "visibility:hidden; width:10%");
             }else{
